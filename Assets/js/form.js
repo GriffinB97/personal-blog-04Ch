@@ -5,12 +5,12 @@ document.getElementById('blogForm').addEventListener('submit', function(event) {
     const title = document.getElementById('title').value;
     const content = document.getElementById('content').value;
 
-    if (!username || !title || !content) {
-        alert('Please complete all fields');
+    if (!username.trim() || !title.trim() || !content.trim()) {
+        alert('All fields are required. Please ensure no field is left blank.');
         return;
     }
 
-    const blogPost = { username, title, content };
+    const blogPost = { username, title, content, date: new Date().toISOString() };
     const currentPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
     currentPosts.push(blogPost);
     localStorage.setItem('blogPosts', JSON.stringify(currentPosts));

@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     padding: 20px;
     line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .dark-mode {
@@ -12,10 +13,10 @@ body {
 button {
     margin: 5px;
     padding: 10px;
+    cursor: pointer;
 }
 
-input, textarea {
-    margin: 5px 0;
-    padding: 10px;
+input, textarea, button {
     width: 100%;
+    box-sizing: border-box;
 }

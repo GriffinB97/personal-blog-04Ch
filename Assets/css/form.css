@@ -11,6 +11,8 @@ label {
 
 input[type="text"],
 textarea {
-    display: block;
-    width: calc(100% - 22px); /* padding and border adjustments */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
